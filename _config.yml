@@ -1,0 +1,41 @@
+# Lee and Associates
+markdown: kramdown
+
+# URL of the Site
+url: ""
+
+# Base URL of the Site (i.e., Name of the Repository in which the Site is hosted)
+baseurl: ""
+
+# Title of the Site
+title: "BCRE Excavation"
+
+# Site settings
+permalink: pretty
+
+# SASS
+sass:
+  sass_dir: _sass
+  style: compressed
+
+#Plugins
+plugins:
+  - jekyll-tidy
+
+# Compress
+compress_html:
+  clippings: all
+
+# Exclude
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - references/
