@@ -16,6 +16,10 @@ html {
     padding: 0;
     position: relative;
 
+    @media only screen and (max-width: 768px) {
+        background-position: 50%;
+    }
+
     body {
         display: flex;
         flex-direction: column;
@@ -54,26 +58,13 @@ html {
                             color: $text-color;
                         }
                     }
-
-
-                    div.call-to-action {
-                        display: grid;
-                        grid-template-columns: repeat(3, 1fr);
-                        grid-template-rows: repeat(2, 1fr);
-                        grid-column-gap: 16px;
-                        padding: 0 2em 1em;
-
-                        @media only screen and (max-width: 40em) {
-                            grid-template-columns: repeat(1, 1fr);
-                            grid-row-gap: 8px;
-                        }
-                    }
                 }
 
                 h1.title {
                     color: white;
                     font-size: 4rem;
                     text-align: center;
+                    text-shadow: 2px 2px $primary-color;
 
                     a {
                         color: white;
@@ -87,6 +78,74 @@ html {
 
                     @media only screen and (max-width: 40em) {
                         font-size: 2rem;
+                    }
+                }
+
+                .logo-wrapper {
+                    height: 100vh;
+                    position: relative;
+                    width: 100%;
+
+                    img {
+                        left: 50%;
+                        max-width: 256px;
+                        position: absolute;
+                        top: 4%;
+                        transform: translateX(-50%);
+                    }
+
+                    h1.title {
+                        left: 50%;
+                        line-height: 1;
+                        position: absolute;
+                        top: 12%;
+                        transform: translate(-50%, -12%);
+
+                        @media only screen and (max-width: 40em) {
+                            top: 15%;
+                        }
+                    }
+
+                    hr {
+                        border-color: white;
+                        left: 50%;
+                        max-width: 377px;
+                        position: absolute;
+                        top: 29%;
+                        transform: translate(-50%, -29%);
+                        width: 100%;
+
+                        @media only screen and (max-width: 40em) {
+                            top: 25%;
+                        }
+
+                        @media only screen and (max-width: 378px) {
+                            max-width: 256px;
+                        }
+                    }
+
+                    h2 {
+                        left: 50%;
+                        line-height: 1;
+                        position: absolute;
+                        top: 32%;
+                        transform: translate(-50%, -32%);
+
+                        @media only screen and (max-width: 40em) {
+                            top: 29%;
+                        }
+                    }
+
+                    p.contact-info {
+                        left: 50%;
+                        line-height: 1.2;
+                        position: absolute;
+                        top: 42%;
+                        transform: translate(-50%, -42%);
+
+                        @media only screen and (max-width: 40em) {
+                            top: 40%;
+                        }
                     }
                 }
             }
